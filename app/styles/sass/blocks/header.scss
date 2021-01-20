@@ -1,0 +1,65 @@
+.header {
+    background-color: $black;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo-box {
+    }
+
+    &__logo {
+    }
+
+    &__content {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+    }
+
+    &__navigation {
+        padding: 25px 0;
+    }
+
+
+    &__languages {
+        text-decoration: underline;
+        background-color: #474747;
+
+        .active {
+            color: $orange;
+        }
+    }
+}
+.navigation {
+
+    a {
+        display: inline-block;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    li {
+        transition: .2s ease;
+
+        & + li {
+            margin-left: 25px;
+        }
+    }
+
+    &__sublist {
+        a {
+            padding-right: 10px;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}
