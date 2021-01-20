@@ -1,5 +1,5 @@
 .header {
-    background-color: $black;
+    background: url('../images/dist/header.png') no-repeat center;
 
     &__inner {
         display: flex;
@@ -8,9 +8,84 @@
     }
 
     &__logo-box {
+        padding: 20px 0;
+        padding-right: 60px;
     }
 
     &__logo {
+        display: block;
+        img {
+            width: 180px;
+        }
+    }
+
+    &__close-btn {
+        position: relative;
+        display: none;
+        width: 40px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin-bottom: 10px;
+
+        span {
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 3px;
+                left: 0;
+                top: 0;
+                background-color: #ffffff;
+                border-radius: 5px;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    
+    &__menu-btn {
+        display: none;
+        width: 40px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 5px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 3px;
+                left: 0;
+                top: 8px;
+                background-color: #ffffff;
+                border-radius: 5px;
+            }
+
+            &::after {
+                top: 16px;
+            }
+        }
+    }
+
+    &__logo-mob {
+        display: none;
+        width: 250px;
     }
 
     &__content {
@@ -18,48 +93,154 @@
         line-height: 20px;
         letter-spacing: 0.025em;
         color: #ffffff;
+        width: 100%;
     }
 
     &__navigation {
-        padding: 25px 0;
+        position: relative;
+        padding-left: 75px;
     }
 
 
     &__languages {
+        position: relative;
+        display: inline-block;
         text-decoration: underline;
-        background-color: #474747;
+        padding: 10px 25px;
+        margin-left: 15px;
 
+        ul {
+            position: relative;
+            z-index: 3; 
+            display: flex;
+            align-items: center;
+        }
+
+        a {
+            display: inline-block;
+            
+        }
+
+        li + li {
+            a {
+                position: relative;
+                padding-left: 17px;
+                margin-left: 15px;
+                &::before {
+                    position: absolute;
+                    content: "|";
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        
         .active {
             color: $orange;
         }
     }
 }
 .navigation {
+    transition: .3s ease;
 
     a {
         display: inline-block;
     }
 
+    &.open {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     &__list {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        & > li > a {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
     }
 
-    li {
+    li, a {
         transition: .2s ease;
-
-        & + li {
-            margin-left: 25px;
-        }
     }
 
     &__sublist {
+        position: relative;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 1px;
+            background-color: #ffffff;
+            transform: rotate(-45deg);
+            
+        }
+
+        &::after {
+            transform: rotate(45deg);
+            right: 3px;
+        }
+        
         a {
-            padding-right: 10px;
+            padding-right: 12px;
+            padding-left: 15px;
         }
 
         ul {
+            position: absolute;
+            left: 0;
+            top: 102%;
+            min-width: 151px;
+            background-color: $black;
+            border-radius: 5px;
             display: none;
+            z-index: 5;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: -3px;
+                width: 100%;
+                height: 30px;
+                background: $orange;
+                z-index: -1;
+                border-radius: 5px;
+            }
+        }
+
+        li {
+            background-color: $black;
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 5px 20px;
+                border-radius: 5px;
+            }
+
+            &:first-child {
+                border-radius: 5px;
+                a {
+                    padding-top: 15px;
+                }
+            }
+            &:last-child {
+                border-radius: 5px;
+
+                a {
+                    padding-bottom: 15px;
+                }
+            }
         }
     }
+
 }
