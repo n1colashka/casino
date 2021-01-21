@@ -2,32 +2,30 @@
     padding-bottom: 20px;
     padding-top: 5px;
 }
-.casino-of-the-year {
+.best--1 {
     background: url('../images/src/main-bg.png') no-repeat center / cover;
     padding-top: 75px;
     padding-bottom: 90px;
     margin-top: -43px;
-
-    .best-box__content {
-        background-image: url('../images/dist/best-bg-el.png');
-        background-repeat: no-repeat;
-        background-position: center right;
-    }
-
-    .best-box__head {
-        padding-top: 60px;
-    }
 }
 
-.best-bonus {
-    .best-box__content {
-        background-image: url('../images/dist/best-bg-el-2.png');
-        background-repeat: no-repeat;
-        background-position: center right;
-    }
+.best-box__content--1 {
+    background-image: url('../images/dist/best-bg-el.png');
+    background-repeat: no-repeat;
+    background-position: center right;
 }
 
-.best-with-subtitle {
+.best-box__head--1 {
+    padding-top: 60px;
+}
+
+.best-box__content--2 {
+    background-image: url('../images/dist/best-bg-el-2.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.best-box--sub {
     .best-box__info-img {
         margin-bottom: 0;
     }
@@ -36,7 +34,6 @@
     }
     .best-box__btn {
         max-width: 245px;
-        margin-top: 5px;
     }
     .best-box__info {
         position: relative;
@@ -202,6 +199,7 @@
 
 
     &__info-img {
+        display: block;
         margin-bottom: 10px;
         img {
             border-radius: 5px;
@@ -241,6 +239,7 @@
     }
 
     &__info-title {
+        display: inline-block;
         font-family: 'Roboto-Bold', sans-serif;
         font-size: 20px;
         line-height: 28px;
@@ -290,6 +289,8 @@
         padding-right: 60px;
         text-align: center;
         max-width: 250px;
+
+        
     }
 
     &__promocode-btn {
@@ -323,7 +324,25 @@
 
     &__btn {
         width: 100%;
-        
+        & + .best-box__promocode {
+            transition: .3s ease;
+            height: 0;
+            padding: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        &.open {
+            display: none;
+        }
+
+        &.open + .best-box__promocode {
+            height: 50px;
+            padding: 15px;
+            padding-right: 60px;
+            overflow: visible;
+            opacity: 1;
+        }
     }
 
     &__btn-caption {

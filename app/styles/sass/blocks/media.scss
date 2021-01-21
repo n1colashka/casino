@@ -115,7 +115,7 @@
             top: -1px;
         }
         &__title {
-            padding: 15px 5px;
+            padding: 15px 10px;
             border-radius: 15px 15px 0 0;
             margin-bottom: -1px;
 
@@ -133,6 +133,19 @@
             &::after {
                 right: -12px;
                 transform: skewX(18deg);
+            }
+        }
+
+        &__subtitle {
+            bottom: -55px;
+            border-radius: 15px;
+
+            &::before {
+                left: -10px;
+            }
+
+            &::after {
+                right: -10px;
             }
         }
     }
@@ -251,19 +264,21 @@
 }
 
 @media (max-width: 768px) {
-    .best-bonus  {
-        padding-bottom: 0;
+    .best-box--sub .best-box__info-img {
+        margin-bottom: 10px;
     }
-    .best-with-subtitle .best-box__btn {
+    .best--2  {
+        padding-bottom: 0;
+        margin-top: -50px;
+    }
+    .best--sub .best-box__btn {
         max-width: 300px;
     }
-    .casino-of-the-year .best-box__content {
+    .best-box__content {
         background: #fff;
     }
-    .best-bonus .best-box__content {
-        background: #fff;
-    }
-    .best-with-subtitle {
+    
+    .best--sub {
         .best-box__info-img {
             margin-bottom: 15px;
         }
@@ -281,6 +296,21 @@
             }
             &::after {
                 right: -2px;
+            }
+        }
+        &__subtitle {
+            bottom: -51px;
+            padding: 12px;
+            max-width: 250px;
+
+            &::before {
+                left: -10px;
+                width: 32px;
+            }
+
+            &::after {
+                right: -10px;
+                width: 32px;
             }
         }
         &__games {
@@ -311,8 +341,9 @@
             margin-bottom: 15px;
         }
         &__head {
-            overflow: hidden;
+            // overflow: hidden;
         }
+        
         &__content {
             padding: 10px;
             flex-direction: column;
