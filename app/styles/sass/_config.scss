@@ -124,13 +124,25 @@ textarea {
 	font-size: 40px;
 	line-height: 1;
 	color: $black;
+	text-transform: uppercase;
 }
 
 .btn {
 	display: inline-block;
 	border: none;;
 	cursor: pointer;
-	transition: .3s ease;
+	transition: .2s ease;
+	background-color: $red;
+	color: #fefefe;
+	padding: 15px 20px;
+	border-radius: 5px;
+	text-align: center;
+	
+	@media (min-width: 1025px) {
+		&:hover {
+			background-color: #6a0105;
+		}
+	}
 }
 
 

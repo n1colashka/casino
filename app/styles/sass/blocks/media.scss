@@ -33,6 +33,14 @@
 }
 
 @media (min-width: 1025px) {
+    .best-box {
+        &__reviews-btn {
+            &:hover {
+                background-color: $green;
+                color: #ffffff;
+            }
+        }
+    }
     .navigation {
         &__list > li:hover {
             & > a {
@@ -64,6 +72,12 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .title {
+        font-size: 34px;
+    }
+}
+
 @media (max-width: 1200px) {
     .header {
         background-position: left -380px center;
@@ -83,6 +97,48 @@
 }
 
 @media (max-width: 1024px) {
+    .best-box {
+
+        &__games {
+            flex-wrap: wrap;
+        }
+        
+        &__col:last-child {
+            display: flex;
+        }
+        
+        &__head-left,
+        &__head-right {
+            display: none;
+        }
+        &__content::before {
+            top: -1px;
+        }
+        &__title {
+            padding: 15px 5px;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: -1px;
+
+            &::before,
+            &::after {
+                width: 23px;
+                height: calc(100% - 1px);
+            }
+
+            &::before {
+                left: -12px;
+                transform: skewX(-18deg);
+            }
+
+            &::after {
+                right: -12px;
+                transform: skewX(18deg);
+            }
+        }
+    }
+    .title {
+        font-size: 30px;
+    }
     .header {
         background: #474747;
         border-radius: 0 0 27px 0;
@@ -192,4 +248,154 @@
         }
     }
     
+}
+
+@media (max-width: 768px) {
+    .best-bonus  {
+        padding-bottom: 0;
+    }
+    .best-with-subtitle .best-box__btn {
+        max-width: 300px;
+    }
+    .casino-of-the-year .best-box__content {
+        background: #fff;
+    }
+    .best-bonus .best-box__content {
+        background: #fff;
+    }
+    .best-with-subtitle {
+        .best-box__info-img {
+            margin-bottom: 15px;
+        }
+        .best-box__info {
+            padding-bottom: 15px;
+        }
+    }
+    .best-box {
+        padding-bottom: 40px;
+        &__title {
+            border-radius: 30px 30px 0 0;
+
+            &::before {
+                left: -2px;
+            }
+            &::after {
+                right: -2px;
+            }
+        }
+        &__games {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            padding-left: 0;
+        }
+        
+        &__col:last-child {
+            display: block;
+        }
+        &__foot {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__promocode {
+            margin-bottom: 20px;
+        }
+        &__btn, &__btn-wrapper, &__promocode {
+            max-width: 300px;
+        }
+        &__rating {
+            display: none;
+        }
+        &__rating--mob {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        &__head {
+            overflow: hidden;
+        }
+        &__content {
+            padding: 10px;
+            flex-direction: column;
+            background: #fff;
+
+            &::before {
+                content: none;
+            }
+        }
+
+        &__info-link {
+            margin-bottom: 10px;
+        }
+        
+        &__inner {
+            max-width: 100%;
+        }
+
+        &__info-descr {
+            padding-left: 0;
+        }
+
+        &__btn-wrapper {
+            padding-left: 0;
+        }
+
+        &__info {
+            flex-direction: column;
+        }
+
+        &__info-head {
+            width: 100%;
+        }
+
+        &__info-img {
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__info-descr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        &__reviews-btn {
+            position: relative;
+            border: none;
+            padding: 0;
+            padding-right: 15px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 55%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 1.5px;
+                background-color: $green;
+                transform: rotate(-45deg);
+                
+            }
+    
+            &::after {
+                top: 45%;
+                transform: rotate(-135deg);
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .best-box {
+        &__col:last-child {
+            display: flex;
+        }
+    }
 }
