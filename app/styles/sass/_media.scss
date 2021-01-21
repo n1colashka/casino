@@ -264,6 +264,37 @@
 }
 
 @media (max-width: 768px) {
+    .subscribe {
+        padding: 40px 0;
+        background-position: top 0 left 10%;
+        &__btn {
+            max-width: 250px;
+            width: 100%;
+            background: url('../images/dist/telegram.png') center right 62px no-repeat;
+            background-color: $blue;
+        }
+        .container {
+            padding: 0 15px;
+        }
+        &__inner {
+            flex-direction: column;
+            padding: 18px;
+            padding-top: 170px;
+            background-position: right -155px bottom -100px;
+            border-left: transparent;
+        }
+        &__text {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        &__img {
+            top: 0;
+            left: -10px;
+            height: 155px;
+            width: calc(100% + 20px);
+            border-radius: 5px 5px 80px 80px;
+        }
+    }
     .best-box--sub .best-box__info-img {
         margin-bottom: 10px;
     }
@@ -427,6 +458,16 @@
     .best-box {
         &__col:last-child {
             display: flex;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .subscribe {
+        &__img {
+            top: -1px;
+            border-radius: 0;
+            background: url('../images/dist/subscribe-img-mob.png') center no-repeat;
         }
     }
 }
