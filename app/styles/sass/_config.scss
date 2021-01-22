@@ -96,9 +96,12 @@ html {
 	
 	
 ul, li {
-	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+
+ol li {
+	list-style: none;
 }
 	
 
@@ -131,7 +134,7 @@ textarea {
 	font-family: 'Roboto-Bold', sans-serif;
 	font-weight: bold;
 	font-size: 40px;
-	line-height: 1;
+	line-height: 40px;
 	color: $black;
 	text-transform: uppercase;
 }
@@ -275,6 +278,10 @@ p, h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 		margin-right: -15px;
 		margin-left: 120px;
+
+		&--white {
+			border-color: #fff;
+		}
 	}
 	&__right {
 		border: 1px solid $grey;
@@ -283,6 +290,9 @@ p, h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 		margin-left: -15px;
 		margin-right: 120px;
+		&--white {
+			border-color: #fff;
+		}
 	}
 	&__head {
 		display: flex;
