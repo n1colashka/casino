@@ -1,17 +1,9 @@
 .table-box {
     padding: 20px 0;
 
-    &__head {
-    }
-
-    &__head-left {
-    }
-
     &__head-title {
         flex-shrink: 0;
-    }
-
-    &__head-right {
+        padding: 16px;
     }
 
     &__content {
@@ -25,7 +17,7 @@
             height: 100%;
             background-color: $grey;
             border-radius: 5px;
-            z-index: -1;
+            z-index: 4;
         }
     }
 
@@ -46,8 +38,6 @@
             }
         }
 
-        
-
         td, th {
             border-bottom: 1px solid #ffffff;
             width: 20%;
@@ -58,15 +48,18 @@
         th {
             font-family: 'Roboto-Bold', sans-serif;
             font-weight: 700;
-            border-radius: 0 0 5px 5px;
             text-align: left;
+            
         }
 
         tr {
             &:first-child {
-                th {
+                th:first-child {
                     border-radius: 0;
                     border-top-left-radius: 5px;
+                }
+                th:last-child {
+                    border-top-right-radius: 5px;
                 }
                 
                 th, td {
@@ -78,12 +71,45 @@
                 th, td {
                     border-bottom: none;
                 }
+                td:last-child {
+                    border-bottom-right-radius: 5px;
+                }
             }
         }
 
         td:last-child {
             border-radius: 0;
-            border-top-right-radius: 5px;
+        }
+    }
+}
+
+.table-box--2 {
+
+    table {
+        border-collapse: collapse;
+        td, th {
+            background-color: #ffffff;
+            border-color: $grey;
+            position: relative;
+            z-index: -1;
+        }
+        tr:first-child {
+            position: relative;
+            z-index: 9;
+            box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
+            th:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            th:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+            td, th {
+                border: none;
+            }
+        }
+        th:first-child {
+            border: none;
+            background-color: $grey;
         }
     }
 }
