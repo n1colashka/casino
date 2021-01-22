@@ -157,6 +157,14 @@
 }
 
 @media (max-width: 1024px) {
+    .table-box {
+        table {
+            font-size: 14px;
+            td,th {
+                padding: 10px;
+            }
+        }
+    }
     .desc {
         &__bonuses {
             width: 40%;
@@ -409,6 +417,20 @@
 }
 
 @media (max-width: 768px) {
+    .table-box {
+        &__head-title {
+            flex-shrink: 1;
+        }
+        &__content {
+            border-radius: 5px;
+            overflow: auto;
+        }
+        table {
+            word-break: break-word;
+            min-width: 520px;
+            border-collapse: collapse;
+        }
+    }
     .box {
         &__right,
         &__left {
@@ -710,6 +732,32 @@
 }
 
 @media (max-width: 600px) {
+    .table-box {
+        &__content {
+            margin-right: -10px;
+        }
+        &__head-title {
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 18px;
+
+            span {
+                margin: 0 -15px;
+                display: block;
+            }
+            
+            &::before {
+                left: -10px;
+                transform: skewX(-10deg);
+                width: 20px;
+            }
+            &::after {
+                right: -10px;
+                transform: skewX(10deg);
+                width: 20px;
+            }
+        }
+    }
     .best-box {
         &__col:last-child {
             display: flex;
