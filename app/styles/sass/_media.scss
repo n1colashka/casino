@@ -116,6 +116,12 @@
     .title {
         font-size: 34px;
     }
+    .benefits__title {
+        padding-right: 0;
+    }
+    .benefits__img {
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -164,6 +170,20 @@
 }
 
 @media (max-width: 1024px) {
+    .benefits {
+        &__inner {
+            padding: 20px;
+        }
+        &__box {
+            flex-direction: column;
+        }
+        &__img {
+            max-width: 100%;
+        }
+        &__list {
+            text-align: justify;
+        }
+    }
     .top__inner {
         padding: 20px;
     }
