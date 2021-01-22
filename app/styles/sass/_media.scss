@@ -33,12 +33,41 @@
 }
 
 @media (min-width: 1025px) {
-    .best-box {
-        &__reviews-btn {
-            &:hover {
-                background-color: $green;
-                color: #ffffff;
+    .listing__more-btn:hover {
+        background-color: $green;
+        color: #fff;
+
+        span {
+            &::before,
+            &::after {
+                background-color: #ffffff;
             }
+        }
+        
+        &::after {
+            background-color: $green;
+        }
+
+        &--grey:hover {
+            span {
+                &::before,
+                &::after {
+                    background-color: $grey;
+                }
+            }
+
+        }
+    }
+    .promocode__btn:hover {
+        background-color: #017d05;
+    }
+    .subscribe__btn:hover {
+        background-color: #0086c4;
+    }
+    .second-btn {
+        &:hover {
+            background-color: $green;
+            color: #ffffff;
         }
     }
     .navigation {
@@ -79,6 +108,33 @@
 }
 
 @media (max-width: 1200px) {
+    .listing {
+        &__foot {
+            flex-direction: column;
+            align-items: stretch;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__btn {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__promocode {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &__item {
+            padding: 10px;
+            padding-bottom: 0;
+        }
+        &__img {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
     .header {
         background-position: left -380px center;
         &__navigation {
@@ -97,6 +153,50 @@
 }
 
 @media (max-width: 1024px) {
+    .listing {
+        .rating__item {
+            margin-left: 2px;
+        }
+        &__stats {
+            margin-left: 7px;
+        }
+        &__img {
+            width: auto;
+        }
+        &__img--border {
+            width: 100%;
+        }
+        &__foot {
+            margin-bottom: 20px;
+        }
+        &__foot--white {
+            margin-bottom: 70px;
+        }
+        &__stats {
+            text-align: left;
+        }
+        &__head-btn {
+            margin-left: 7px;
+        }
+        &__rating .rating__value {
+            margin-left: 15px;
+        }
+        &__head-left {
+            display: none;
+        }
+        &__head-right {
+            display: none;
+        }
+        &__items {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        &__item {
+            max-width: calc(50% - 20px);
+            margin-bottom: 15px;
+        }
+    }
     .best-box {
 
         &__games {
@@ -264,6 +364,40 @@
 }
 
 @media (max-width: 768px) {
+    .box {
+        &__head-title {
+		
+            &::before {
+                left: -11px;
+                width: 30px;
+            }
+            
+            &::after {
+                right: -11px;
+                width: 30px;
+            }
+        }
+    }
+    .listing {
+        padding-bottom: 40px;
+        &--2 {
+            background-position: left center;
+        }
+        &__items {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        &__item {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            min-height: auto;
+        }
+    }
+    .promocode {
+        margin-bottom: 20px;
+    }
     .subscribe {
         padding: 40px 0;
         background-position: top 0 left 10%;
@@ -358,9 +492,7 @@
             flex-direction: column;
             align-items: center;
         }
-        &__promocode {
-            margin-bottom: 20px;
-        }
+        
         &__btn, &__btn-wrapper, &__promocode {
             max-width: 300px;
         }
@@ -370,9 +502,6 @@
         &__rating--mob {
             display: flex;
             margin-bottom: 15px;
-        }
-        &__head {
-            // overflow: hidden;
         }
         
         &__content {
@@ -424,32 +553,33 @@
             text-align: center;
             width: 100%;
         }
+    }
 
-        &__reviews-btn {
-            position: relative;
-            border: none;
-            padding: 0;
-            padding-right: 15px;
+    .second-btn {
+        position: relative;
+        border: none;
+        padding: 0;
+        padding-right: 15px;
 
-            &::before,
-            &::after {
-                position: absolute;
-                content: "";
-                right: 0;
-                top: 55%;
-                transform: translateY(-50%);
-                width: 6px;
-                height: 1.5px;
-                background-color: $green;
-                transform: rotate(-45deg);
-                
-            }
-    
-            &::after {
-                top: 45%;
-                transform: rotate(-135deg);
-            }
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 55%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 1.5px;
+            background-color: $green;
+            transform: rotate(-45deg);
+            
         }
+
+        &::after {
+            top: 45%;
+            transform: rotate(-135deg);
+        }
+
     }
     
 }

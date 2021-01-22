@@ -7,6 +7,7 @@ $lightgreen: #7ec999;
 $orange: #fcb201;
 $blue: #00aeff;
 $green: #00a806;
+$grey: #ebeef7;
 $fontsize: 16px; // Body Font Size
 $userfont: 'Roboto', sans-serif; // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
@@ -28,6 +29,8 @@ $bg: #fff;
 	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
 		url('../fonts/Roboto-Regular.woff') format('woff'),
 		url('../fonts/Roboto-Regular.ttf') format('opentype');
+	font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
@@ -36,6 +39,8 @@ $bg: #fff;
 	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
 		url('../fonts/Roboto-Bold.woff') format('woff'),
 		url('../fonts/Roboto-Bold.ttf') format('opentype');
+	font-display: swap;
+	font-style: normal;
 
 }
 
@@ -45,6 +50,8 @@ $bg: #fff;
 	src: url('../fonts/Roboto-Light.woff2') format('woff2'),
 		url('../fonts/Roboto-Light.woff') format('woff'),
 		url('../fonts/Roboto-Light.ttf') format('opentype');
+	font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
@@ -53,6 +60,8 @@ $bg: #fff;
 	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
 		url('../fonts/Roboto-Medium.woff') format('woff'),
 		url('../fonts/Roboto-Medium.ttf') format('opentype');
+	font-display: swap;
+	font-style: normal;
 }
 
 // @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff')
@@ -170,3 +179,147 @@ p, h1, h2, h3, h4, h5, h6 {
 	} 
 }
 	
+.promocode {
+	position: relative;
+	padding: 15px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	height: 50px;
+	width: 100%;
+	padding-right: 60px;
+	text-align: center;
+	max-width: 250px;
+
+	&__btn {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 0;
+		top: 0;
+		width: 50px;
+		height: 100%;
+		border-radius: 5px;
+		background-color: $green;
+		transition: .2s ease;
+	}
+
+	&__text {
+		text-transform: uppercase;
+		font-family: 'Roboto-Medium', sans-serif;
+		font-weight: 500;
+	}
+}
+
+.second-btn {
+	font-family: 'Roboto-Medium', sans-serif;
+	font-weight: 500;
+	display: inline-block;
+	color: $green;
+	padding: 15px 50px;
+	border-radius: 5px;
+	border: 1px solid $green;
+	text-align: center;
+	transition: .2s ease;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+
+	&__value {
+		color: #898989;
+		font-size: 20px;
+		line-height: 28px;
+		margin-left: 5px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 3px;
+	}
+}
+
+.box {
+	&__activate-link {
+		display: inline-block;
+		font-family: 'Roboto-Light', sans-serif;
+		font-weight: 300;
+		color: $green;
+		margin-bottom: 15px;
+	}
+	&__title {
+		display: block;
+		font-family: 'Roboto-Bold', sans-serif;
+		font-size: 20px;
+		line-height: 28px;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&__subtitle {
+		font-family: 'Roboto-Light', sans-serif;
+		font-weight: 300;
+	}
+	&__head {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	&__head-title {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		padding: 16px 7px;
+		margin: 0 25px;
+		background-color: $grey;
+		border-radius: 15px 15px 0 0;
+
+		&::before {
+            position: absolute;
+            content: "";
+            transform: skewX(-15deg);
+            background-color: $grey;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 100%;
+            border-radius: 15px 15px 0 0;
+            z-index: 3;
+        }
+        
+        &::after {
+            position: absolute;
+            content: "";
+            transform: skewX(15deg);
+            background-color: $grey;
+            right: -11px;
+            top: 0;
+            width: 20px;
+			height: 100%;
+            border-radius: 15px 15px 0 0;
+            z-index: 3;
+        }
+
+		span {
+			position: relative;
+			z-index: 6;
+		}
+
+		&--white {
+			background-color: #ffffff;
+
+			&::before,
+			&::after {
+				background-color: #ffffff;
+			}
+		}
+	}
+}

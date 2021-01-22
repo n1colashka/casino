@@ -166,7 +166,6 @@
         position: relative;
         display: flex;
         justify-content: flex-start;
-        // align-items: center;
         padding: 20px;
         background-color: #fff;
         box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
@@ -206,45 +205,16 @@
         }
     }
 
-    &__rating-list {
-        display: flex;
-        align-items: center;
-    }
-    
-    &__rating {
-        display: flex;
-        align-items: center;
-    }
-
     &__rating--mob {
         display: none;
     }
 
-    &__rating-value {
-        color: #898989;
-        font-size: 20px;
-        line-height: 28px;
-        margin-left: 5px;
-    }
-
-    &__rating-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 3px;
-    }
 
     &__info-descr {
         padding-left: 20px;
     }
 
     &__info-title {
-        display: inline-block;
-        font-family: 'Roboto-Bold', sans-serif;
-        font-size: 20px;
-        line-height: 28px;
-        font-weight: 700;
-        margin-bottom: 10px;
         margin-top: 5px;
     }
 
@@ -253,69 +223,13 @@
         font-weight: 300;
     }
 
-    &__info-link {
-        display: inline-block;
-        font-family: 'Roboto-Light', sans-serif;
-        font-weight: 300;
-        color: $green;
-        margin-bottom: 15px;
-    }
-
-    &__reviews-btn {
-        font-family: 'Roboto-Medium', sans-serif;
-        font-weight: 500;
-        display: inline-block;
-        color: $green;
-        padding: 15px 50px;
-        border-radius: 5px;
-        border: 1px solid $green;
-        text-align: center;
-        transition: .2s ease;
-    }
-
     &__foot {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
     }
 
-    &__promocode {
-        position: relative;
-        padding: 15px;
-        background-color: #ffffff;
-        border-radius: 5px;
-        height: 50px;
-        width: 100%;
-        padding-right: 60px;
-        text-align: center;
-        max-width: 250px;
-
-        
-    }
-
-    &__promocode-btn {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        right: 0;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        border-radius: 5px;
-        background-color: $green;
-        transition: .2s ease;
-
-        &:hover {
-            background-color: #017d05;
-        }
-    }
-
-    &__promocode-text {
-        text-transform: uppercase;
-        font-family: 'Roboto-Medium', sans-serif;
-        font-weight: 500;
-    }
+    
 
     &__btn-wrapper {
         width: 100%;
