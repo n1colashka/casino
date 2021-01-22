@@ -44,6 +44,10 @@
         }
     }
 
+    ul, ul li {
+        list-style-type: disc;
+    }
+
     ol {
         list-style-type: decimal;
         li {
