@@ -190,6 +190,49 @@
 }
 
 @media (max-width: 1024px) {
+    .reviews {
+        &__header {
+            padding: 12px 0;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__login {
+            font-size: 16px;
+            padding: 13px;
+        }
+        &__count {
+            display: none;
+        }
+    }
+    .comment {
+        &__btn {
+            font-size: 11px;
+        }
+        &__author {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        &__img {
+            width: 44px;
+            height: 44px;
+        }
+        &__foot-center {
+            padding-right: 8px;
+        }
+        &__plus {
+            font-size: 22px;
+        }
+        &__minus {
+            font-size: 22px;
+        }
+        &__stat-value {
+            font-size: 12px;
+        }
+        &__date {
+            font-size: 12px;
+        }
+    }
     .views {
         &__content {
             flex-wrap: wrap;
