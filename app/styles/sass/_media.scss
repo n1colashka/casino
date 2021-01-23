@@ -1250,6 +1250,23 @@
     }
 }
 @media (max-width: 400px) {
+    #modal-1 {
+        .modal__title {
+            padding-left: 20px;
+            padding-right: 20px;
+            width: calc(100% - 92px);
+            &::before,
+            &::after {
+                width: 40px;
+            }
+        }
+        .modal__title-wrapper {
+            top: -105px;
+        }
+        .modal__close {
+            top: -170px;
+        }
+    }
     .table-box--2 {
         table {
             min-width: 380px;

@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initModals() {
         MicroModal.init({
-            onShow: modal => console.info(`${modal.id} is shown`), // [1]
-            onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+            onShow: modal => document.querySelector('html').classList.add('overflow-hidden'), // [1]
+            onClose: modal => document.querySelector('html').classList.remove('overflow-hidden'), // [2]
             // openTrigger: 'data-custom-open', // [3]
             // closeTrigger: 'data-custom-close', // [4]
             openClass: 'is-open', // [5]

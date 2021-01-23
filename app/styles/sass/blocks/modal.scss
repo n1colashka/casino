@@ -1,7 +1,9 @@
 /**************************\
   Basic Modal Styles
 \**************************/
-
+.modal-test {
+	min-height: 80vh;
+}
 .modal {
     font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   }
@@ -28,28 +30,13 @@
     box-sizing: border-box;
   }
   
-  .modal__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modal__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.25;
-    color: #00449e;
-    box-sizing: border-box;
-  }
-  
   .modal__close {
+      cursor: pointer;
     background: transparent;
     border: 0;
   }
   
-  .modal__header .modal__close:before { content: "\2715"; }
+.modal__close:before { content: "\2715"; font-size: 30px;color: $orange; font-weight: 700; }
   
   .modal__content {
     margin-top: 2rem;
@@ -58,44 +45,7 @@
     color: rgba(0,0,0,.8);
   }
   
-  .modal__btn {
-    font-size: .875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    background-color: #e6e6e6;
-    color: rgba(0,0,0,.8);
-    border-radius: .25rem;
-    border-style: none;
-    border-width: 0;
-    cursor: pointer;
-    -webkit-appearance: button;
-    text-transform: none;
-    overflow: visible;
-    line-height: 1.15;
-    margin: 0;
-    will-change: transform;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    transition: -webkit-transform .25s ease-out;
-    transition: transform .25s ease-out;
-    transition: transform .25s ease-out,-webkit-transform .25s ease-out;
-  }
-  
-  .modal__btn:focus, .modal__btn:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  
-  .modal__btn-primary {
-    background-color: #00449e;
-    color: #fff;
-  }
-  
+ 
   
   
   /**************************\
@@ -149,3 +99,108 @@
   .micromodal-slide .modal__overlay {
     will-change: transform;
   }
+
+#modal-2 {
+    .modal__container {
+        padding: 40px;
+    }
+  
+    .modal__close::before {
+        color: #fff;
+    }
+    .modal__title {
+        width: calc(100% - 92px);
+        &::before,
+        &::after {
+            width: 40px;
+        }
+    }
+}
+.modal {
+    &__overlay {
+        z-index: 50;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &__title-wrapper {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -105px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    &__container {
+        max-width: 465px;
+        width: 100%;
+        overflow: visible;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .modal__title {
+        display: block;
+        position: relative;
+        background-color: $orange;
+        padding: 13px;
+        width: calc(100% - 92px);
+    
+
+        &::before,
+        &::after {
+            background-color: $orange;
+            width: 40px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: -170px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    &__content {
+        margin: 0;
+    }
+    
+    &__container {
+        padding: 20px;
+        margin-top: 200px;
+    }
+
+    &__form {
+        width: 100%;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: $grey;
+    }
+
+    &__form-item {
+        margin-bottom: 20px;
+
+        input {
+            font-family: 'Roboto-Light', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            padding: 15px;
+            color: #898989;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+        }
+    }
+
+    &__form-btn {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Модальные окна</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+
+<body>
+    <header class="header">
+	<div class="container">
+		<div class="header__inner">
+			<div class="header__logo-box">
+				<a href="#" class="header__logo">
+					<img src="images/dist/logo.png" alt="casino">
+				</a>
+				<a href="#" class="header__logo-mob">
+					<img src="images/dist/logo-mobile.png" alt="casino">
+				</a>
+			</div>
+			<div class="header__content">
+				<nav class="header__navigation navigation">
+					<button class="header__close-btn">
+						<span></span>
+					</button>
+					<ul class="navigation__list">
+						<li class="navigation__sublist">
+							<a href="#">Онлайн казино</a>
+							<ul>
+								<li> <a href="#">Hitslot</a></li>
+								<li><a href="#">Gonzo's Quest</a></li>
+								<li><a href="#">Money train</a></li>
+								<li><a href="#">Moon Sisters</a></li>
+							</ul>
+						</li>
+						<li class="navigation__sublist">
+							<a href="#">Игры</a>
+							<ul>
+								<li> <a href="#">Hitslot</a></li>
+								<li><a href="#">Gonzo's Quest</a></li>
+								<li><a href="#">Money train</a></li>
+								<li><a href="#">Moon Sisters</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Бездепозитные Бонусы</a></li>
+						<li><a href="#">Бесплатные вращения в казино</a></li>
+						<li><a href="#">Сейчас играют</a></li>
+					</ul>
+				</nav>
+				<button class="header__menu-btn">
+					<span></span>
+				</button>
+				<div class="header__languages">
+					<ul>
+						<li class="active"><a href="#">РУС</a></li>
+						<li><a href="#">УКР</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+    <section class="modal-test">
+        <a data-micromodal-trigger="modal-1" href="#"> modal 1</a>
+        <a data-micromodal-trigger="modal-2" href="#"> modal 2</a>
+    </section>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                <div class="modal__title-wrapper">
+                    <div class="modal__title title box__head-title"><span>Связаться <br> с нами</span></div>
+                </div>
+            <main class="modal__content" id="modal-1-content">
+                <div class="modal__form">
+                    <form action="#">
+                        <div class="modal__form-item">
+                            <input type="text" placeholder="Ваше имя">
+                        </div>
+                        <div class="modal__form-item">
+                            <input type="number" placeholder="Телефон">
+                        </div>
+                        <div class="modal__form-item">
+                            <input type="email" placeholder="E-mail">
+                        </div>
+                        <button class="modal__form-btn btn">Отправить</button>
+                    </form>
+                </div>
+            </main>
+            </div>
+        </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                <div class="modal__title-wrapper">
+                    <div class="modal__title title box__head-title"><span>Спасибо <br> за заявку</span></div>
+                </div>
+            <main class="modal__content" id="modal-1-content">
+                <div class="modal__text">
+                    Наши менеджеры свяжутся с Вами, <br>
+как только обработают Ваш запрос
+                </div>
+            </main>
+            </div>
+        </div>
+    </div>
+</body>
+    
+    	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__row">
+					<a href="#" class="footer__logo footer__col">
+						<img src="images/dist/footer-logo.png" alt="logo">
+					</a>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li><a href="#">Онлайн казино</a></li>
+							<li><a href="#">Список онлайн казино</a></li>
+							<li><a href="#">Онлайн казино с Приват Банк (Приват24)</a></li>
+							<li><a href="#">Игры</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li><a href="#">Игровые автоматы</a></li>
+							<li><a href="#">Игровые автоматы 777</a></li>
+							<li><a href="#">Онлайн рулетка</a></li>
+							<li><a href="#">Онлайн Блэкджек</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li><a href="#">Бездепозитные Бонусы</a></li>
+							<li><a href="#">Бесплатные вращения в казино</a></li>
+							<li><a href="#">Сейчас играют</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__row">
+					<div class="footer__policy footer__col">
+						<a href="#">Политика конфинденциальности</a>
+						<p>©2021. Все права защищены.</p>
+					</div>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li>Космолот</li>
+							<li><a href="#">Космолот казино на Андроид и Айфон</a></li>
+							<li><a href="#">Отзывы о казино Космолот</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li>Популярные казино</li>
+							<li><a href="#">Вавада казино</a></li>
+							<li><a href="#">Париматч(PM) казино</a></li>
+							<li><a href="#">Кинг казино</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<ul class="footer__list">
+							<li><a href="#">Золотой Кубок казино</a></li>
+							<li><a href="#">Эль слотс казино</a></li>
+							<li><a href="#">Золото Лото казино</a></li>
+							<li><a href="#">Космолот казино</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+</html>
