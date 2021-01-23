@@ -637,6 +637,7 @@
 }
 
 @media (max-width: 768px) {
+   
     .views {
         &__minus {
             &::before {
@@ -1151,7 +1152,14 @@
         }
 
     }
-    
+    .best-box__title::before {
+        left: -2px;
+        transform: skewX(-12deg);
+    }
+    .best-box__title::after {
+        transform: skewX(12deg);
+        right: -2px;
+    }
 }
 
 @media (max-width: 600px) {

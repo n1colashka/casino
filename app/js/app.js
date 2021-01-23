@@ -87,10 +87,50 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
+    function initCasinoMore() {
+        const casinoBtn = document.querySelector('.casino__btn--mob');
+
+        if (casinoBtn) {
+            casinoBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                casinoBtn.closest('.casino__left').classList.add('open');
+                casinoBtn.style.display = 'none';
+            })
+        }
+    }
+
+    function initInfoMore() {
+        const infoBtn = document.querySelector('.info__btn');
+        const infoContent = document.querySelector('.info__content');
+
+        if (infoBtn) {
+            infoBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                infoContent.classList.add('open');
+                infoBtn.style.display = 'none';
+            })
+        }
+    }
+    
+    function initRating() {
+        var myRating = raterJs( {
+            rating: 4.5,
+            starSize: 20,
+            readOnly:true, 
+            element:document.querySelector("#rater"),
+            rateCallback:function rateCallback(rating, done) {
+              this.setRating(rating); 
+              done(); 
+            }
+        });
+    }
+    
 
     initMenu();
     initPromocodeOpen();
     toggleAnswers();
     initModals();
-
+    initCasinoMore();
+    initInfoMore();
+    initRating();
 })

@@ -81,6 +81,12 @@
     &__left {
         max-width: 660px;
         width: 100%;
+
+        &.open {
+            .casino__text span {
+                display: inline-block;
+            }
+        }
     }
 
     &__images {
