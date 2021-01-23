@@ -190,12 +190,28 @@
 }
 
 @media (max-width: 1024px) {
+    .views {
+        &__content {
+            flex-wrap: wrap;
+            padding-right: 0;
+        }
+        &__table {
+            max-width: 100%;
+            border-bottom: 1px solid $grey;
+        }
+        &__rating {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+    .casino-page .breadcrumbs {
+        background-color: $grey;
+    }
     .checks {
         &__list {
             flex-wrap: wrap;
         }
         &__item {
-            // border: 1px solid $grey;
             border: none;
             box-shadow:0px 0px 0px 1px $grey;
             &:last-child {
@@ -578,6 +594,83 @@
 }
 
 @media (max-width: 768px) {
+    .views {
+        &__minus {
+            &::before {
+                left: -13px;
+                transform: skew(-15deg);
+            }
+        }
+        &__table td {
+            padding: 8px;
+        }
+        &__plus {
+            &::before {
+                right: -13px;
+                transform: skew(15deg);
+            }
+        }
+        &__rating {
+            flex-direction: column;
+            padding-bottom: 0;
+        }
+        &__rating-circle-wrapper {
+            margin: 0;
+            margin-bottom: 33px;
+        }
+        &__info {
+            margin: 10px;
+            width: calc(100% - 20px);
+        }
+    }
+    .info {
+        &__content {
+            margin-bottom: 20px;
+        }
+        
+        &__btn {
+            display: block;
+        }
+
+        &__content {
+            box-shadow: none;
+            table {
+                tr, td, th {
+                    display: block;
+                    border: none;
+                    border-radius: 5px;
+                }
+                
+                th {
+                    width: 100%;
+                    &:first-child {
+                        width: 100%;
+                    }
+                }
+                tr {
+                    position: relative;
+                    z-index: 3;
+                    box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
+                    margin-bottom: 10px;
+                }
+                thead {
+                    tr:first-child {
+                        margin-bottom: 0;
+                        box-shadow: none;
+                        th:first-child {
+                            border-bottom: 1px solid $grey;
+                        }
+                        th:last-child {
+                            padding-left: 45px;
+                        }
+                    }
+                }
+                tr:nth-child(4) ~ tr {
+                    display: none;
+                }
+            }
+        }
+    }
     .checks {
         padding-top: 40px;
         &__item {

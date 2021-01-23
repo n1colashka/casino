@@ -1,0 +1,200 @@
+.views {
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+    &__wrapper {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            top: -5px;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-color: $grey;
+            border-radius: 5px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-radius: 5px;
+        box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
+        position: relative;
+        z-index: 3;
+        padding-right: 20px;
+        background-color: #ffffff;
+    }
+
+    &__table {
+        position: relative;
+        max-width: 600px;
+        width: 100%;
+        
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            font-family: 'Roboto-Light', sans-serif;
+            font-weight: 300;
+            padding: 15px;
+            width: 50%;
+            border-right: 1px solid $grey;
+        }
+
+        tr {
+            &:nth-child(even) {
+                background-color: $grey;
+                td:first-child {
+                    border-radius: 5px 0 0 5px;
+                }
+                td:last-child {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+
+        table {
+            width: 100%;
+        }
+    }
+
+    &__minus {
+        font-size: 30px;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        position: absolute;
+        left: 20px;
+        top: -40px;
+        width: calc(50% - 20px);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background-color: $lightred;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 100%;
+            left: -16px;
+            top: 0;
+            background-color: $lightred;
+            border-top-left-radius: 10px;
+            transform: skew(-10deg);
+        }
+    }
+
+    &__plus {
+        font-size: 30px;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        position: absolute;
+        right: 20px;
+        top: -40px;
+        width: calc(50% - 20px);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        background-color: $lightgreen;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 100%;
+            right: -16px;
+            top: 0;
+            background-color: $lightgreen;
+            border-top-right-radius: 10px;
+            transform: skew(10deg);
+        }
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+    }
+
+    &__rating-circle-wrapper {
+        margin-right: 20px;
+    }
+
+    &__rating-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 205px;
+        height: 205px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
+        svg {
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            width: 201px;
+            height: 245px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='201px' height='245px'%3E%3Cpath fill-rule='evenodd' fill='rgb(235, 238, 247)' d='M100.500,-0.000 C156.005,-0.000 201.000,45.032 201.000,100.582 C201.000,243.253 202.016,244.163 100.500,244.163 C0.429,244.163 0.000,243.936 0.000,100.582 C0.000,45.032 44.995,-0.000 100.500,-0.000 Z'/%3E%3C/svg%3E");
+        }
+    }
+
+    &__rating-value {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+    }
+
+    &__rating-caption {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 24px;
+        margin-top: 12px;
+    }
+
+    &__info {
+        border-radius: 5px;
+        background-color: $grey;
+        width: 100%;
+
+        table {
+            width: 100%;
+            padding: 10px;
+
+            td {
+                padding: 6px;
+
+                &:last-child {
+                    font-family: 'Roboto-Bold', sans-serif;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
