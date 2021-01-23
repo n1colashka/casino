@@ -2,6 +2,11 @@
     background: url('../images/dist/header.png') no-repeat center;
     position: relative;
 
+    &__bottom {
+        display: flex;
+        align-items: center;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
@@ -245,3 +250,4 @@
     }
 
 }
+

@@ -26,9 +26,11 @@ $bg: #fff;
 @font-face {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+	src: local('Roboto Regular'), local('Roboto-Regular'),
+		url('../fonts/Roboto-Regular.woff2') format('woff2'),
 		url('../fonts/Roboto-Regular.woff') format('woff'),
-		url('../fonts/Roboto-Regular.ttf') format('opentype');
+		url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Regular.ttf') format('truetype');
 	font-display: swap;
 	font-style: normal;
 }
@@ -36,9 +38,11 @@ $bg: #fff;
 @font-face {
 	font-family: 'Roboto-Bold', sans-serif;
 	font-weight: 700;
-	src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+	src: local('Roboto Bold'), local('Roboto-Bold'),
+		url('../fonts/Roboto-Bold.woff2') format('woff2'),
 		url('../fonts/Roboto-Bold.woff') format('woff'),
-		url('../fonts/Roboto-Bold.ttf') format('opentype');
+		url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Bold.ttf') format('truetype');
 	font-display: swap;
 	font-style: normal;
 
@@ -46,25 +50,27 @@ $bg: #fff;
 
 @font-face {
 	font-family: 'Roboto-Light', sans-serif;
-	font-weight: 300;
-	src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+	src: local('Roboto Light'), local('Roboto-Light'),
+		url('../fonts/Roboto-Light.woff2') format('woff2'),
 		url('../fonts/Roboto-Light.woff') format('woff'),
-		url('../fonts/Roboto-Light.ttf') format('opentype');
+		url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: 300;
 	font-display: swap;
 	font-style: normal;
 }
+
 
 @font-face {
-	font-family: 'Roboto-Medium', sans-serif;
-	font-weight: 500;
-	src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+    font-family: 'Roboto-Medium';
+	src: local('Roboto Medium'), local('Roboto-Medium'),
+		url('../fonts/Roboto-Medium.woff2') format('woff2'),
 		url('../fonts/Roboto-Medium.woff') format('woff'),
-		url('../fonts/Roboto-Medium.ttf') format('opentype');
-	font-display: swap;
-	font-style: normal;
+		url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
-
-// @include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff')
 
 // GENERAL DOCUMENT STYLES
 
@@ -140,6 +146,8 @@ textarea {
 }
 
 .btn {
+	font-family: 'Roboto-Medium', sans-serif;
+	font-weight: 500;
 	display: inline-block;
 	border: none;;
 	cursor: pointer;
@@ -349,4 +357,68 @@ p, h1, h2, h3, h4, h5, h6 {
 			}
 		}
 	}
+}
+
+.breadcrumbs {
+    padding-left: 35px;
+	color: #fcb200;
+	
+	&--mob {
+		display: none;
+	}
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    li {
+        margin-left: 15px;
+        line-height: 24px;
+
+        a {
+            display: block;
+            position: relative;
+            padding-right: 25px;
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 55%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 1.5px;
+                background-color: #fcb200;
+                transform: rotate(-45deg);
+                z-index: 4;
+                transition: .3s ease;
+            }
+    
+            &::after {
+                top: 46%;
+                transform: rotate(-135deg);
+            }
+        }
+
+        &:last-child {
+            color: $black;
+            a {
+                padding-right: 0;
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.casino-page-bg {
+    background: url('../images/dist/casino-bg.png') top center / cover no-repeat;
+}
+.casino-page {
+    background-color: $grey;
 }

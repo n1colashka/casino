@@ -1,0 +1,192 @@
+
+.casino {
+    padding-top: 35px;
+    padding-bottom: 20px;
+
+    &__head {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 6px;
+            background-color: $grey;
+            z-index: 6;
+            border-radius: 5px;
+        }
+    }
+
+    &__head-left {
+        border-radius: 5px;
+    }
+
+    &__head-right {
+        border-radius: 5px;
+    }
+
+    &__content {
+        display: flex;
+        box-shadow: 0px 3px 20px 0px rgba(55, 55, 55, 0.15);
+        border-radius: 5px;
+        padding: 20px;
+        background-color: #ffffff;
+    }
+    
+    &__left-inner {
+        display: flex;
+        align-items: center;
+        background-color: $grey;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        padding-bottom: 17px;
+    }
+    &__btn {
+        width: calc(50% - 15px);
+        text-align: center;
+    }
+
+    &__btn--green {
+        font-family: 'Roboto-Medium', sans-serif;
+        font-weight: 500;
+        display: inline-block;
+        border-radius: 5px;
+        color: $green;
+        border: 1px solid $green;
+        padding: 13px 30px;
+        margin-right: 15px;
+        transition: .2s ease;
+    }
+
+    &__buttons-mob {
+        display: none;
+    }
+
+    &__btn--mob {
+        display: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    &__btn--red {
+        margin-left: 15px;
+    }
+
+    &__left-foot {
+        display: flex;
+    }
+
+    &__left {
+        max-width: 660px;
+        width: 100%;
+    }
+
+    &__images {
+        max-width: 150px;
+        flex-shrink: 0;
+    }
+
+    &__img {
+        img {
+            display: flex;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+            margin: 5px;
+        }
+    }
+
+    &__key {
+        font-family: 'Roboto-Light', sans-serif;
+        font-weight: 300;
+    }
+    
+    &__text {
+        font-family: 'Roboto-Light', sans-serif;
+        font-weight: 300;
+        margin-left: 17px;
+        padding-right: 30px;
+    }
+
+    &__right {
+        margin-left: 20px;
+    }
+
+    &__table {
+        width: 100%;
+        margin-bottom: 10px;
+
+        td {
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    }
+
+
+    &__value {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $grey;
+        padding: 15px 20px;
+    }
+
+    &__rating-info {
+        margin-left: 15px;
+    }
+
+    &__rating-text {
+        font-family: 'Roboto-Light', sans-serif;
+        font-weight: 300;
+        a {
+            font-family: 'Roboto-Medium', sans-serif;
+            font-weight: 500;
+            color: $green;
+        }
+    }
+    &__rating-title {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+}
+
+.circle-rating {
+    
+    &__elem {
+        position: relative;
+    }
+
+    &__value {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &__count {
+        text-align: center;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

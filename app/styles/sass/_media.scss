@@ -33,6 +33,16 @@
 }
 
 @media (min-width: 1025px) {
+    .casino__btn--green:hover {
+        background-color: $green;
+        color: #ffffff;
+    }
+    .box__head-title {
+        flex-shrink: 0;
+    }
+    .breadcrumbs li:hover {
+        text-decoration: underline;
+    }
     .footer__list a:hover {
         color: $green;
     }
@@ -128,6 +138,13 @@
 }
 
 @media (max-width: 1200px) {
+    .bonus-box {
+        &__table {
+            table td {
+                padding: 5px 10px;
+            }
+        }
+    }
     .listing {
         &__foot {
             flex-direction: column;
@@ -173,6 +190,79 @@
 }
 
 @media (max-width: 1024px) {
+    .checks {
+        &__list {
+            flex-wrap: wrap;
+        }
+        &__item {
+            // border: 1px solid $grey;
+            border: none;
+            box-shadow:0px 0px 0px 1px $grey;
+            &:last-child {
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+    .bonus-box {
+        &__content {
+            display: block;
+        }
+        &__left {
+            max-width: 100%;
+            border-bottom: 1px solid $grey;
+        }
+        &__table {
+            border: none;
+        }
+        &__caption {
+            justify-content: center;
+        }
+        &__left-body {
+            text-align: center;
+        }
+        &__left-head {
+            padding: 15px;
+            justify-content: flex-start;
+        }
+        &__right {
+            max-width: 100%;
+        }
+        &__btn {
+            max-width: 450px;
+        }
+    }
+    .casino {
+        &__left-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__left {
+            max-width: 400px;
+        }
+        &__images {
+            display: flex;
+            align-items: flex-start;
+            max-width: 100%;
+        }
+        &__text {
+            margin-left: 0;
+            padding-right: 0;
+        }
+        &__icons {
+            max-width: 100px;
+            margin-left: 20px;
+        }
+        &__img {
+            margin-bottom: 5px;
+        }
+    }
+    .breadcrumbs {
+        display: none;
+        &--mob {
+            display: block;
+            padding: 15px 0;
+        }
+    }
     .footer {
         &__col {
             margin-left: 10px;
@@ -488,6 +578,84 @@
 }
 
 @media (max-width: 768px) {
+    .checks {
+        padding-top: 40px;
+        &__item {
+            width: 25%;
+        }
+    }
+    .casino-page-bg {
+        background-position: top -25px center;
+        background-size: auto 109%;
+    }
+    .bonus-box {
+        padding-bottom: 40px;
+        &__right {
+            padding: 15px;
+        }
+        &__left-head {
+            padding: 15px 10px;
+        }
+        &__table {
+            padding: 10px 5px;
+            tr {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            td {
+                width: 50%;
+                &:nth-child(even) {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+    .casino {
+        &__rating {
+            padding: 7px;
+            margin-top: 20px;
+        }
+        &__rating-info {
+            margin-left: 13px;
+        }
+        &__content {
+            flex-direction: column;
+            padding: 10px;
+        }
+        &__left-inner {
+            padding: 10px 8px;
+            margin-bottom: 10px;
+        }
+        &__left {
+            max-width: 100%;
+        }
+        &__right {
+            margin-left: 0;
+        }
+        
+        &__btn {
+            width: 100%;
+            margin: 0;
+        }
+        &__left-foot {
+            display: none;
+        }
+        &__btn--red {
+            margin-top: 15px;
+        }
+        &__buttons-mob {
+            display: block;
+        }
+        &__btn--mob {
+            display: block;
+        }
+        &__text {
+            margin-bottom: 12px;
+            span {
+                display: none;
+            }
+        }
+    }
     .footer {
         &__row {
             flex-direction: column;
@@ -934,6 +1102,11 @@
 }
 
 @media (max-width: 450px) {
+    .checks {
+        &__item {
+            width: 33.333%;
+        }
+    }
     .top__img {
         img {
             width: 100%;
