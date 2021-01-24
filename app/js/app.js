@@ -112,17 +112,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    function initRating() {
-        var myRating = raterJs( {
-            rating: 4.5,
-            starSize: 20,
-            readOnly:true, 
-            element:document.querySelector("#rater"),
-            rateCallback:function rateCallback(rating, done) {
-              this.setRating(rating); 
-              done(); 
+    function initRatings() {
+        const ratings = document.querySelectorAll('.rating');
+
+        if (ratings.length > 0) {
+            let ratingActive, ratingValue, fault = 0;
+
+            for (let index = 0; index < ratings.length; index++) {
+                const rating = ratings[index];
+                initRating(rating);
             }
-        });
+
+            function initRating(rating) {
+                initRatingVars(rating);
+                setRatingActiveWidth();
+            }
+    
+            function initRatingVars(rating) {
+                ratingActive = rating.querySelector('.rating__active');
+                ratingValue = rating.querySelector('.rating__value');
+                if (rating.classList.contains('listing__rating')) fault = 2;
+            }
+    
+            function setRatingActiveWidth(index = ratingValue.innerHTML) {
+                let str = new String(index);
+                index = str.replace(",",".");
+                const ratingActiveWidth = index / 0.05;
+                ratingActive.style.width = `calc(${ratingActiveWidth}% - ${fault}px)`;
+            }
+        }
+
+    }
+
+    function initCircleRating() {
+        const circleRatings = document.querySelectorAll('.circle-rating');
+
+        if (circleRatings.length > 0) {
+            circleRatings.forEach(rating => {
+                const circle = rating.querySelector('.circle-rating__circle');
+        
+                const value = rating.querySelector('.circle-rating__value');
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                circle.style.strokeDashoffset = circumference;
+                setProgress(value);
+    
+                function setProgress(value) {
+                    let percent = value.textContent * 10;
+                    const offset = circumference - percent / 100 * circumference;
+                    circle.style.strokeDashoffset = offset;
+                }
+            })
+        }
+
+        const viewsCircleRatings = document.querySelectorAll('.views__rating-circle');
+
+        if (viewsCircleRatings.length > 0) {
+            viewsCircleRatings.forEach(rating => {
+                const circle = rating.querySelector('.circle-rating__circle');
+                const value = rating.querySelector('.views__rating-value');
+                const radius = circle.r.baseVal.value;
+                const circumference = 2 * Math.PI * radius;
+                
+                circle.style.strokeDasharray = `${circumference} ${circumference}`;
+                circle.style.strokeDashoffset = circumference;
+                setProgress(value);
+    
+                function setProgress(value) {
+                    let percent = value.textContent * 10;
+                    const offset = circumference - percent / 100 * circumference;
+                    circle.style.strokeDashoffset = offset;
+                }
+            })
+        }
     }
     
 
@@ -132,5 +196,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initModals();
     initCasinoMore();
     initInfoMore();
-    initRating();
+    initRatings();
+    initCircleRating();
 })

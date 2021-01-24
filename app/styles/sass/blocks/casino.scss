@@ -176,6 +176,12 @@
     
     &__elem {
         position: relative;
+
+    }
+
+    &__circle {
+        transform-origin: center;
+        transform: rotate(-90deg);
     }
 
     &__value {

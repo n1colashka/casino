@@ -78,7 +78,7 @@
         padding: 15px 25px;
         border-top: 2px solid #ffd200;
 
-        span {
+        span:first-child {
             position: relative;
             z-index: 6;
         }
@@ -331,6 +331,22 @@
             height: 100%;
             border-radius: 0 0 15px 0;
             z-index: 3;
+        }
+    }
+    &__info-head {
+        flex-shrink: 0;
+    }
+
+    .rating {
+    
+        &__body {
+            &::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23px' height='20px'%3E%3Cpath fill-rule='evenodd' fill='%23fff' d='M13.763,6.603 L21.000,7.778 L15.661,12.783 L16.775,20.000 L10.345,16.491 L3.796,19.776 L5.161,12.602 L-0.000,7.415 L7.273,6.491 L10.632,0.000 L13.763,6.603 Z'/%3E%3C/svg%3E");			background-repeat: repeat-x;
+            }
+        }
+    
+        &__active {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='23px' height='20px'%3E%3Cpath fill-rule='evenodd' fill='%23fcb201' d='M13.763,6.603 L21.000,7.778 L15.661,12.783 L16.775,20.000 L10.345,16.491 L3.796,19.776 L5.161,12.602 L-0.000,7.415 L7.273,6.491 L10.632,0.000 L13.763,6.603 Z'/%3E%3C/svg%3E");
         }
     }
 }
