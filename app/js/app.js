@@ -160,7 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setProgress(value);
     
                 function setProgress(value) {
-                    let percent = value.textContent * 10;
+                    value = value.textContent.slice(0, -1) ;
+                    let percent = value;
                     const offset = circumference - percent / 100 * circumference;
                     circle.style.strokeDashoffset = offset;
                 }
@@ -181,7 +182,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setProgress(value);
     
                 function setProgress(value) {
-                    let percent = value.textContent * 10;
+                    value = value.textContent.slice(0, -1);
+                    let percent = value;
                     const offset = circumference - percent / 100 * circumference;
                     circle.style.strokeDashoffset = offset;
                 }

@@ -136,7 +136,7 @@ textarea {
 }
 	
 
-.title {
+h1, .title {
 	font-family: 'Roboto-Bold', sans-serif;
 	font-weight: bold;
 	font-size: 40px;
@@ -176,10 +176,9 @@ a {
 	color: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	padding: 0;
-	font-weight: normal;
+
+h1 {
+	margin-bottom: 10px;
 }
 
 .overflow-hidden {
@@ -227,7 +226,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
 	display: inline-block;
 	color: $green;
-	padding: 15px 50px;
+	padding: 13px 50px;
 	border-radius: 5px;
 	border: 1px solid $green;
 	text-align: center;
@@ -453,3 +452,45 @@ p, h1, h2, h3, h4, h5, h6 {
     background: url('../images/dist/casino-bg.png') top center / cover no-repeat;
 }
 
+ol.list {
+	padding-left: 20px;
+	margin: 10px 0;
+	list-style-type: decimal;
+	li {
+		list-style-type: decimal;
+	}
+}
+
+.list {
+	li {
+		margin-bottom: 10px;
+		&::marker {
+			color: $green;
+			font-family: 'Roboto-Bold', sans-serif;
+			font-weight: 700;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+ul.list {
+	padding-left: 20px;
+	margin: 10px 0;
+	list-style-type: disc;
+	&::marker {
+		color: $green;
+		font-family: 'Roboto-Bold', sans-serif;
+		font-weight: 700;
+	}
+
+	li {
+		list-style-type: disc;
+	}
+}
+
+hr {
+	border: 1px solid $grey;
+	margin: 15px 0;
+}

@@ -8,7 +8,6 @@
 
     &__title {
         padding-right: 130px;
-        margin-bottom: 5px;
     }
 
     &__text {
@@ -31,29 +30,8 @@
     &__list {
         padding-left: 20px;
         margin: 0;
-        li {
-            margin-bottom: 10px;
-            &::marker {
-                color: $green;
-                font-family: 'Roboto-Bold', sans-serif;
-                font-weight: 700;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
     }
 
-    ul, ul li {
-        list-style-type: disc;
-    }
-
-    ol {
-        list-style-type: decimal;
-        li {
-            list-style-type: decimal;
-        }
-    }
 
     &__img {
         max-width: 380px;

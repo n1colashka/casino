@@ -190,6 +190,12 @@
 }
 
 @media (max-width: 1024px) {
+    .casino__head-title {
+        &::before,
+        &::after {
+            width: 30px;
+        }
+    }
     .reviews {
         &__header {
             padding: 12px 0;
@@ -534,7 +540,6 @@
             padding-right: 10px;
             padding-top: 30px;
             padding-bottom: 10px;
-            z-index: 6;
         }
         &__languages {
             padding: 10px;
@@ -567,8 +572,9 @@
                 }
 
                 ul {
-                    opacity: 1;
-                    transform: translateX(0);
+                    display: block;
+                    // opacity: 1;
+                    // transform: translateX(0);
                     overflow: visible;
                 }
 
@@ -579,12 +585,12 @@
             }
 
             ul {
-                display: block;
+                display: none;
                 transition: .3s ease;
-                opacity: 0;
+                // opacity: 0;
                 left: 150px;
                 top: 55%;
-                transform: translateX(-200%);
+                // transform: translateX(-200%);
                 overflow: hidden;
 
                 &::before {
@@ -637,7 +643,9 @@
 }
 
 @media (max-width: 768px) {
-    
+    .table__head-title {
+        font-size: 26px;
+    }
     .views {
         &__minus {
             &::before {
