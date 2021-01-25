@@ -566,34 +566,58 @@
                 padding-bottom: 12px;
             }
 
+            & > a{
+                display: inline-block;
+                padding-right: 20px;
+                position: relative;
+                &::before,
+                &::after {
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 12px;
+                    width: 5px;
+                    height: 1px;
+                    background-color: #fff;
+                    transform: rotate(-45deg);
+                }
+                
+                &::after {
+                    transform: rotate(45deg);
+                    right: 3px;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: none;
+            }
+
             &.open {
                 & > a {
                     color: $orange;
+                    
+                    
                 }
 
                 ul {
                     display: block;
-                    // opacity: 1;
-                    // transform: translateX(0);
                     overflow: visible;
                 }
 
-                &::before,
-                &::after {
-                    background-color: $orange;
-                }
+                
             }
 
             ul {
+                position: static;
                 display: none;
                 transition: .3s ease;
-                // opacity: 0;
                 left: 150px;
                 top: 55%;
-                // transform: translateX(-200%);
                 overflow: hidden;
 
                 &::before {
+                    display: none;
                     height: 20px;
                 }
             }
