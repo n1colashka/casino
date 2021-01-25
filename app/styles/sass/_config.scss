@@ -461,6 +461,37 @@ ol.list {
 	}
 }
 
+.section-content {
+	ol {
+		padding-left: 20px;
+		margin: 10px 0;
+		list-style-type: decimal;
+		li {
+			list-style-type: decimal;
+			&::marker {
+				color: $green;
+				font-family: 'Roboto-Bold', sans-serif;
+				font-weight: 700;
+			}
+		}
+	}
+	
+	ul {
+		padding-left: 20px;
+		margin: 10px 0;
+		list-style-type: disc;
+	
+		li {
+			list-style-type: disc;
+			&::marker {
+				color: $green;
+				font-family: 'Roboto-Bold', sans-serif;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
 .list {
 	li {
 		margin-bottom: 10px;
